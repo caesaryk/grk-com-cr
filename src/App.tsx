@@ -8,6 +8,7 @@ import DynamicScheduler from './components/DynamicScheduler';
 import WorkloadMatrix from './components/WorkloadMatrix';
 import StaffManagement from './components/StaffManagement';
 import LiveOpsMap from './components/LiveOpsMap';
+import Login from './components/Login';
 
 function App() {
   const [user, setUser] = useState<any>(null);
@@ -31,7 +32,7 @@ function App() {
   }
 
   if (!user) {
-    return <div className="flex items-center justify-center h-screen text-xl">Please log in via Supabase (full auth coming soon)</div>;
+    return <Login />;
   }
 
   return (
