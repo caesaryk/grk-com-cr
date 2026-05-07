@@ -13,4 +13,5 @@ body {
   @apply bg-gray-950 text-white;
 }
 
+/* Leaflet styles */
 @import 'leaflet/dist/leaflet.css';
