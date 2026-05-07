@@ -5,8 +5,9 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import CalendarView from './components/CalendarView';
 import DynamicScheduler from './components/DynamicScheduler';
+import WorkloadMatrix from './components/WorkloadMatrix';
 import StaffManagement from './components/StaffManagement';
-import Properties from './components/Properties';
+import LiveOpsMap from './components/LiveOpsMap';
 
 function App() {
   const [user, setUser] = useState<any>(null);
@@ -30,7 +31,7 @@ function App() {
   }
 
   if (!user) {
-    return <div className="flex items-center justify-center h-screen text-xl">Please log in via Supabase (coming soon)</div>;
+    return <div className="flex items-center justify-center h-screen text-xl">Please log in via Supabase (full auth coming soon)</div>;
   }
 
   return (
@@ -42,8 +43,9 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/calendar" element={<CalendarView />} />
             <Route path="/scheduler" element={<DynamicScheduler />} />
+            <Route path="/matrix" element={<WorkloadMatrix />} />
             <Route path="/staff" element={<StaffManagement />} />
-            <Route path="/properties" element={<Properties />} />
+            <Route path="/map" element={<LiveOpsMap />} />
           </Routes>
         </div>
       </div>
