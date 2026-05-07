@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+  }
+}
+
+body {
+  @apply bg-gray-950 text-white;
+}
+
+@import 'leaflet/dist/leaflet.css';
