@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
-import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from '@dnd-kit/sortable';
 
 export default function DynamicScheduler() {
-  const [tasks, setTasks] = useState(['Task 1 - Sea View 101', 'Task 2 - Ocean Breeze 205']);
-  const [staff, setStaff] = useState(['Maria', 'Juan', 'Carlos']);
+  const [tasks] = useState(['Task 1 - Sea View 101', 'Task 2 - Ocean Breeze 205']);
+  const [staff] = useState(['Maria', 'Juan', 'Carlos']);
 
   return (
     <div className="glass p-8 rounded-3xl">
