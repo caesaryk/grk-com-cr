@@ -1,5 +1,5 @@
 # GRK Operations Portal
 
-Unified Cleaning Operations Management System merging Think-GOC (App 1) and VacationRT (App 2).
+Unified Cleaning Operations Management System
 
-Modern React + Supabase + Tailwind app.
+Merged from Think-GOC (App 1) and VacationRT (App 2)
