@@ -1,5 +1,3 @@
 # GRK Operations Portal
 
-Unified Cleaning Operations Management System
-
-Merged from Think-GOC (App 1) and VacationRT (App 2)
+Unified Cleaning Operations Management System (merged from App 1 Think-GOC and App 2 VacationRT)
