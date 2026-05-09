@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors, DragEndEvent } from '@dnd-kit/core';
-import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from '@dnd-kit/sortable';
-import { useSortable } from '@dnd-kit/sortable';
-import { CSS } from '@dnd-kit/utilities';
+import { SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from '@dnd-kit/sortable';
 
 interface Task {
   id: string;
@@ -41,17 +39,14 @@ export default function DynamicScheduler() {
     const taskId = active.id as string;
     const staffId = over.id as string;
 
-    // Find the task
     const taskIndex = unassignedTasks.findIndex(t => t.id === taskId);
     if (taskIndex === -1) return;
 
     const task = unassignedTasks[taskIndex];
 
-    // Remove from unassigned
     const newUnassigned = unassignedTasks.filter(t => t.id !== taskId);
     setUnassignedTasks(newUnassigned);
 
-    // Add to staff
     const updatedStaff = staffList.map(staff => {
       if (staff.id === staffId) {
         return { ...staff, tasks: [...staff.tasks, task] };
@@ -68,7 +63,6 @@ export default function DynamicScheduler() {
     const task = staff.tasks.find(t => t.id === taskId);
     if (!task) return;
 
-    // Remove from staff
     const updatedStaff = staffList.map(s => {
       if (s.id === staffId) {
         return { ...s, tasks: s.tasks.filter(t => t.id !== taskId) };
@@ -77,7 +71,6 @@ export default function DynamicScheduler() {
     });
     setStaffList(updatedStaff);
 
-    // Add back to unassigned
     setUnassignedTasks([...unassignedTasks, task]);
   };
 
