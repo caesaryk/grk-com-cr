@@ -9,6 +9,7 @@ import WorkloadMatrix from './components/WorkloadMatrix';
 import StaffManagement from './components/StaffManagement';
 import LiveOpsMap from './components/LiveOpsMap';
 import Login from './components/Login';
+import PropertiesManagement from './components/PropertiesManagement';
 
 function App() {
   const [user, setUser] = useState<any>(null);
@@ -47,6 +48,7 @@ function App() {
             <Route path="/matrix" element={<WorkloadMatrix />} />
             <Route path="/staff" element={<StaffManagement />} />
             <Route path="/map" element={<LiveOpsMap />} />
+            <Route path="/properties" element={<PropertiesManagement />} />
           </Routes>
         </div>
       </div>

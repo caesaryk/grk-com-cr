@@ -1,11 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Calendar, ClipboardList, Users, Map, Settings, TrendingUp } from 'lucide-react';
+import { Home, Calendar, ClipboardList, Users, Map, Settings, TrendingUp, Building2 } from 'lucide-react';
 
 const menuItems = [
   { icon: Home, label: 'Dashboard', path: '/' },
   { icon: Calendar, label: 'Calendar', path: '/calendar' },
   { icon: ClipboardList, label: 'Dynamic Scheduler', path: '/scheduler' },
   { icon: Users, label: 'Staff', path: '/staff' },
+  { icon: Building2, label: 'Properties', path: '/properties' },
   { icon: Map, label: 'Live Ops Map', path: '/map' },
   { icon: TrendingUp, label: 'Revenue', path: '/revenue' },
   { icon: Settings, label: 'Settings', path: '/settings' },
